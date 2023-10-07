@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="../css/list.css" class="" />
+    <style>
+      #app {
+        width: 900px;
+        max-width: 80%;
+      }
+
+      .correct{
+        background-color:rgb(48, 232, 119);
+      }
+
+      .incorrect{
+        background-color: rgb(247, 110, 73);
+      }
+    </style>
+  </head>
+  <body
+    class="d-flex justify-content-center align-items-center"
+    style="height: 88vh"
+  >
+    <main id="app" class="text-center">
+      <h2 class="mb-0">Aung Kaung Mon</h2>
+      <h4 class="text-black-50 mb-3">Quiz Application</h4>
+
+      <div class="quiz bg-secondary-subtle p-5 rounded-4">
+        <h4 id="question" class="mb-4"></h4>
+
+        <div id="answer-buttons"></div>
+        <button id="next-button" class="btn btn-dark mt-3 px-4 rounded-3"></button>
+      </div>
+    </main>
+  </body>
+
+  <script src="./quiz.js"></script>
+</html>

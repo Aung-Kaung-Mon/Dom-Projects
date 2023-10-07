@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      class=""
+    />
+  </head>
+  <body class="bg-success-subtle">
+    <h1 class="font-monospace text-decoration-underline">
+      This is the heading
+    </h1>
+
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="male"
+        id="male"
+        name="gender"
+      />
+      <label class="form-check-label" for="male"> Male </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="female"
+        id="female"
+        name="gender"
+        checked
+      />
+      <label class="form-check-label" for="Female"> Female </label>
+    </div>
+
+    <script>
+      const genders = document.querySelectorAll("[name='gender']");
+
+      console.log([...genders].find((ele) => ele.checked === true).value);
+
+      // const head = document.querySelector("h1");
+      // head.style.color = "blue";
+      // head.style.backgroundColor = "gray";
+      // head.classList.add("aung");
+      // head.classList.remove("aung");
+
+      // console.log(head.style.color);
+      // console.log(window.getComputedStyle(head).textDecoration);
+      // console.log(window.getComputedStyle(head).color);
+
+      // head.setAttribute("ak", "hello");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .grandparent {
+        width: 35rem;
+        height: 35rem;
+        background-color: rgba(0, 255, 255, 0.831);
+        position: relative;
+      }
+
+      .parent {
+        width: 25rem;
+        height: 25rem;
+        background-color: rgba(165, 42, 42, 0.858);
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+      }
+
+      .child {
+        width: 15rem;
+        height: 15rem;
+        background-color: rgba(255, 228, 196, 0.886);
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandparent">
+      <div class="parent">
+        <div class="child"></div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("click", (e) => {
+        if (e.target.matches("div")) {
+          console.log("hi");
+        }
+      });
+
+      const g = document.createElement("div");
+
+      g.style.backgroundColor = "red";
+      g.style.width = "10rem";
+      g.style.height = "10rem";
+
+      document.body.append(g);
+
+      // document.querySelector(".grandparent").addEventListener("click", () => {
+      //   const rr = document.createElement("div");
+
+      //   rr.style.width = "19rem";
+      //   rr.style.height = "19rem";
+      //   rr.style.backgroundColor = "red";
+      //   rr.style.marginRight = "2rem";
+
+      //   document.body.prepend(rr);
+      // });
+
+      // function print() {
+      //   console.log("hello just a test");
+      // }
+
+      // grandParent.addEventListener("click", print);
+
+      // setTimeout(() => {
+      //   grandParent.removeEventListener('click',print);
+      // }, 5000);
+
+      // for (let i = 1; i < 1000; i +=100){
+      //   console.log(i);
+      // }
+
+      // const grandParent = document.querySelector(".grandparent");
+      // const parent = document.querySelector(".parent");
+      // const child = document.querySelector(".child");
+
+      // parent.addEventListener(
+      //   "click",
+      //   () => {
+      //     console.log(`parent`);
+      //   },
+      //   { capture: true }
+      // );
+
+      // child.addEventListener(
+      //   "click",
+      //   () => {
+      //     console.log("child");
+      //   },
+      //   { capture: true }
+      // );
+
+      // document.addEventListener(
+      //   "click",
+      //   () => {
+      //     console.log("This is document.");
+      //   },
+      //   {
+      //     capture: true,
+      //   }
+      // );
+
+      // grandParent.addEventListener("click", () => {
+      //   console.log(`grandParent`);
+      // });
+
+      // parent.addEventListener("click", () => {
+      //   console.log(`parent`);
+      // });
+
+      // child.addEventListener("click", () => {
+      //   console.log("child");
+      // });
+
+      // document.addEventListener("click", () => {
+      //   console.log("This is document.");
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Practical</title>
+    <style>
+      fieldset {
+        display: flex;
+        padding: 15px;
+        margin: 10px;
+      }
+
+      fieldset div {
+        margin-right: 10px;
+      }
+
+      #output {
+        font-size: 25px;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Event Practice</legend>
+      <div class="">
+        <label for="text-input">TEXT</label>
+        <input type="text" id="text-input" />
+      </div>
+      <div class="">
+        <label for="">Text Color</label>
+        <input type="color" id="color-input" />
+      </div>
+      <div class="">
+        <label for="">Font Size</label>
+        <input type="range" id="size-input" min="25" value="25" max="70" />
+      </div>
+      <div class="">
+        <select name="input-font" id="input-font">
+            
+        </select>
+      </div>
+
+      <!-- <div class="">
+        <label for="">Font Family</label>
+        <select name="input-font" id="input-font">
+            <option value="Algerian">Algerian</option>
+            <option value="Bodoni MT">Bodoni MT</option>
+            <option value="Consolas">Consolas</option>
+        </select>
+      </div> -->
+    </fieldset>
+
+    <div id="output"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
